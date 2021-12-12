@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de las Luces</title>
+</head>
+<body>
+
+<div>
+    <fieldset>
+    <input type="button" value="Detener">
+    <script>
+        let reloj;
+        reloj=setInterval(procesar, 1000);
+        document.getElementById("boton1").addEvenListener("Click", presionBoton);
+        
+        function procesar() {
+            let nro=parseInt(document.getElementById("cronometro").innerHTML);
+            nro++;
+            document.getElementById("cronometro").innerHTML=nro;
+        }
+        function presionBoton() {
+            if (document.getElementById("boton1").value="parar") {
+                clearInterval(reloj);
+                document.getElementById("boton1").value="avanzar";
+            } else {
+                reloj=setInterval(procesar, 1000);
+                document.getElementById("boton1").value="detener";
+            }
+        }
+    </script>
+</div>
+</fieldset>
+
+</body>
+</html>
