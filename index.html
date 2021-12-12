@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de las Luces</title>
+    <title>Practica 1ªEvaluacion</title>
 </head>
+<script src="principal.js"></script>
 <body>
-
 <div>
     <fieldset>
     <input type="button" value="Detener">
     <script>
         let reloj;
         reloj=setInterval(procesar, 1000);
-        document.getElementById("boton1").addEvenListener("Click", presionBoton);
-        
+        document.getElementById("boton1").addEvenListener("Click", presionBoton); 
         function procesar() {
             let nro=parseInt(document.getElementById("cronometro").innerHTML);
             nro++;
@@ -33,6 +32,73 @@
     </script>
 </div>
 </fieldset>
+<p>Numero de intentos: </p>
+<div>
+    <h1>Juego de Luces hecho por Luis Perez Vazquez</h1>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <fieldset>
+        <input type="niveles" name="nivel" value="facil">
+        <input type="niveles" name="nivel" value="medio">
+        <input type="niveles" name="nivel" value="dificil">
+        <input type="niveles" name="nivel" value="personalizado">
+    </feldset>
+
+
+    <fieldset>
+        <label for="filas">Fila</label>
+        <input type="number" min="0" max="25" intento="1" name="filas">
+        <label for="culumnas">Columna</label>
+        <input type="number" min="0" max="25" intento="1" name="columnas">
+        <label for="luces">Luz</label>
+        <input type="number" min="0" max="15" intento="1" name="luces">
+    </fieldset>
+    <input type="submit" value="Comenzar">
+</div>
+
 
 </body>
 </html>
